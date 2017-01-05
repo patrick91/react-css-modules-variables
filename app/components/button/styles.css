@@ -1,0 +1,12 @@
+.link {
+    width: 100%;
+
+    color: white;
+    text-transform: uppercase;
+    border: 0.2em solid white;
+    padding: 0.7em 1.4em;
+
+    font-size: 1.4rem;
+
+    font-family: Open Sans, sans-serif;
+}

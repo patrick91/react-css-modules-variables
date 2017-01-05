@@ -1,0 +1,34 @@
+:import('mediaqueries.css') {
+    --medium-viewport: medium-viewport;
+    --big-viewport: big-viewport;
+}
+
+.wrapper {
+    width: 90%;
+    min-width: 32rem;
+    max-width: 90rem;
+
+    margin: 4rem auto;
+
+    position: relative;
+}
+
+.wrapper > * {
+    /*margin-bottom: 2rem;*/
+}
+
+@media --medium-viewport {
+    .wrapper > * {
+        lost-masonry-column: 1/2;
+    }
+}
+
+@media --big-viewport {
+    .wrapper > * {
+        lost-masonry-column: 1/3;
+    }
+
+    .wrapper :global .highlight {
+        lost-masonry-column: 2/3;
+    }
+}

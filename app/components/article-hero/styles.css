@@ -1,0 +1,65 @@
+:import('colors.css') {
+    --titles-color: titles-color;
+}
+
+:import('typography.css') {
+    --titles-font: titles-font;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper::after {
+    content: '';
+    padding-top: 75%;
+    display: inline-block;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    color: --titles-color;
+
+    font-family: --titles-font;
+    font-weight: normal;
+    text-align: center;
+    width: 80%;
+
+    font-size: 250%;
+}
+
+
+.button-wrapper {
+    position: absolute;
+
+    bottom: 2rem;
+    left: 50%;
+
+    /* HACK: get the correct width */
+
+    display: table;
+
+    transform: translateX(-50%);
+
+    z-index: 12;
+
+    max-width: 90%;
+
+    text-align: center;
+}
